@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4aq-JD-ZyV">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Traffolight.otf">
+            <string>Traffolight</string>
+        </array>
+        <array key="Typo_Round_Thin_Demo.otf">
+            <string>TypoRoundThinDemo</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MainScreen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="MainScreen" customClass="MainScreen" customModule="MoveYourAss" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PuF-d3-cxX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.38039215686274508" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0r-Mu-nLU">
+                                <rect key="frame" x="10" y="89" width="394" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1u-eb-JpH">
+                                <rect key="frame" x="0.0" y="343" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="baf-QT-yqP"/>
+                                    <tabBarItem systemItem="more" id="Los-o8-IRR"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a62-eg-e5r" userLabel="Tasks">
+                                <rect key="frame" x="0.0" y="232" width="414" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" rowHeight="65" id="unW-FI-Bkw" customClass="TaskCell" customModule="MoveYourAss" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="unW-FI-Bkw" id="7E0-Yq-aZk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lk-hR-64A">
+                                                    <rect key="frame" x="21" y="38" width="285" height="19.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TypoRoundThinDemo" family="Typo Round Thin Demo" pointSize="17"/>
+                                                    <color key="textColor" red="0.55533601448193493" green="0.56083439086294418" blue="0.56083439086294418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5U-rL-euh">
+                                                    <rect key="frame" x="323" y="5" width="83" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="18"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labelgrgfgd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf4-GL-cPI">
+                                                    <rect key="frame" x="21" y="5" width="285" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TypoRoundThinDemo" family="Typo Round Thin Demo" pointSize="24"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7T-SF-D4b">
+                                                    <rect key="frame" x="0.0" y="2" width="7" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimeLeft" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZn-5h-e2a">
+                                                    <rect key="frame" x="286" y="41" width="120" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" red="0.85490196080000003" green="0.36618300650000002" blue="0.25647058820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXH-Yn-uSz">
+                                                    <rect key="frame" x="318" y="29" width="88" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="13"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="TaskComment" destination="1lk-hR-64A" id="2Mr-d0-Xus"/>
+                                            <outlet property="TaskDate" destination="K5U-rL-euh" id="4af-SS-RSc"/>
+                                            <outlet property="TaskTime" destination="bXH-Yn-uSz" id="7jm-E9-e63"/>
+                                            <outlet property="TaskTitle" destination="Yf4-GL-cPI" id="mnj-EG-tZc"/>
+                                            <outlet property="TimeLeft" destination="gZn-5h-e2a" id="qot-ah-IdQ"/>
+                                            <outlet property="cellColor" destination="B7T-SF-D4b" id="j2n-md-Y5Z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YYT-9r-UZB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="c03-Pf-iIE"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="coming week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqc-Bh-1Rg">
+                                <rect key="frame" x="20" y="141" width="384" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="past dues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-6v-R8M">
+                                <rect key="frame" x="20" y="170" width="384" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-XQ-GQk">
+                                <rect key="frame" x="316" y="20" width="132" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="addfriend_btn"/>
+                                <connections>
+                                    <segue destination="4BI-3P-uje" kind="show" id="zEb-8H-kbp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MoveYourAss" id="EUo-YQ-XZI">
+                        <barButtonItem key="rightBarButtonItem" image="addfriend_btn" style="plain" id="IYd-Oa-kKA">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addBtn:" destination="BYZ-38-t0r" id="u1L-mt-tGo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="a62-eg-e5r" id="LMD-9u-3Bf"/>
+                        <outlet property="threeDayLabel" destination="Nqc-Bh-1Rg" id="Hil-P7-LVa"/>
+                        <outlet property="todayLabel" destination="J0r-Mu-nLU" id="xsb-CZ-baJ"/>
+                        <outlet property="weekLabel" destination="h3Q-6v-R8M" id="hDL-ES-Kig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2778.2608695652175" y="138.58695652173915"/>
+        </scene>
+        <!--Exam View Controller-->
+        <scene sceneID="sFT-Hv-goi">
+            <objects>
+                <viewController id="3T2-0V-8dW" customClass="ExamViewController" customModule="MoveYourAss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flU-SY-KXm"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQe-2T-F7V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k9I-ne-WtM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MBo-ks-9do" userLabel="Tasks">
+                                <rect key="frame" x="0.0" y="366" width="414" height="321"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="V6Y-y9-Xox"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="examCell" rowHeight="65" id="Awa-70-X3L" customClass="TaskCell" customModule="MoveYourAss" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Awa-70-X3L" id="YL7-y1-tLr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-E8-CVN">
+                                                    <rect key="frame" x="21" y="38" width="285" height="20"/>
+                                                    <fontDescription key="fontDescription" name="TypoRoundThinDemo" family="Typo Round Thin Demo" pointSize="17"/>
+                                                    <color key="textColor" red="0.55533601450000003" green="0.56083439089999998" blue="0.56083439089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr.10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBm-d6-uDT">
+                                                    <rect key="frame" x="323" y="5" width="83" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="18"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q35-2c-QZm">
+                                                    <rect key="frame" x="392" y="41" width="14" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="14" id="vIj-eu-Zkj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <state key="normal" title="Button" image="button:Q35-2c-QZm:image"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelgrgfgd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-yo-vkr">
+                                                    <rect key="frame" x="21" y="5" width="285" height="31"/>
+                                                    <fontDescription key="fontDescription" name="TypoRoundThinDemo" family="Typo Round Thin Demo" pointSize="24"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-3F-y7o">
+                                                    <rect key="frame" x="318" y="25" width="88" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="gPt-R7-ofz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="12"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fb-j1-xt8">
+                                                    <rect key="frame" x="0.0" y="2" width="7" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="7" id="r95-fL-AkW"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vBm-d6-uDT" firstAttribute="leading" secondItem="Gqh-yo-vkr" secondAttribute="trailing" constant="17" id="35y-lq-6b9"/>
+                                                <constraint firstItem="Q35-2c-QZm" firstAttribute="top" secondItem="vBm-d6-uDT" secondAttribute="bottom" constant="15" id="38j-3C-LaK"/>
+                                                <constraint firstItem="3fb-j1-xt8" firstAttribute="leading" secondItem="YL7-y1-tLr" secondAttribute="leading" id="4YQ-Uk-PhS"/>
+                                                <constraint firstItem="N8f-E8-CVN" firstAttribute="top" secondItem="Gqh-yo-vkr" secondAttribute="bottom" constant="2" id="BI8-Vr-Fvn"/>
+                                                <constraint firstItem="Gqh-yo-vkr" firstAttribute="top" secondItem="YL7-y1-tLr" secondAttribute="topMargin" constant="-3" id="LOu-rw-HT1"/>
+                                                <constraint firstItem="mtf-3F-y7o" firstAttribute="leading" secondItem="Gqh-yo-vkr" secondAttribute="trailing" constant="12" id="Mcl-AN-vLW"/>
+                                                <constraint firstItem="mtf-3F-y7o" firstAttribute="top" secondItem="YL7-y1-tLr" secondAttribute="topMargin" constant="17" id="OWX-IS-HZk"/>
+                                                <constraint firstItem="N8f-E8-CVN" firstAttribute="centerY" secondItem="Q35-2c-QZm" secondAttribute="centerY" id="Peg-jK-kyT"/>
+                                                <constraint firstItem="Q35-2c-QZm" firstAttribute="top" secondItem="mtf-3F-y7o" secondAttribute="bottom" constant="4" id="UAZ-Is-5WL"/>
+                                                <constraint firstItem="3fb-j1-xt8" firstAttribute="top" secondItem="YL7-y1-tLr" secondAttribute="topMargin" constant="-6" id="Vtz-Lp-sm3"/>
+                                                <constraint firstItem="Gqh-yo-vkr" firstAttribute="trailing" secondItem="N8f-E8-CVN" secondAttribute="trailing" id="XdD-sd-N1S"/>
+                                                <constraint firstItem="mtf-3F-y7o" firstAttribute="trailing" secondItem="Q35-2c-QZm" secondAttribute="trailing" id="bVk-Yz-oIR"/>
+                                                <constraint firstItem="Gqh-yo-vkr" firstAttribute="top" secondItem="vBm-d6-uDT" secondAttribute="top" id="hob-tT-Cym"/>
+                                                <constraint firstItem="vBm-d6-uDT" firstAttribute="trailing" secondItem="mtf-3F-y7o" secondAttribute="trailing" id="nWJ-FJ-alz"/>
+                                                <constraint firstItem="vBm-d6-uDT" firstAttribute="trailing" secondItem="YL7-y1-tLr" secondAttribute="trailingMargin" id="pVM-za-USS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Q35-2c-QZm" secondAttribute="bottom" constant="1.6666666666666714" id="peU-Mc-HoX"/>
+                                                <constraint firstItem="Gqh-yo-vkr" firstAttribute="leading" secondItem="N8f-E8-CVN" secondAttribute="leading" id="qGa-z7-eqc"/>
+                                                <constraint firstItem="Gqh-yo-vkr" firstAttribute="leading" secondItem="3fb-j1-xt8" secondAttribute="trailing" constant="14" id="tBz-cV-Aec"/>
+                                                <constraint firstItem="3fb-j1-xt8" firstAttribute="centerY" secondItem="YL7-y1-tLr" secondAttribute="centerY" id="tVQ-Uc-iVw"/>
+                                                <constraint firstItem="Q35-2c-QZm" firstAttribute="leading" secondItem="N8f-E8-CVN" secondAttribute="trailing" constant="86" id="vgu-uv-KPH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="StarButton" destination="Q35-2c-QZm" id="4WK-gQ-n44"/>
+                                            <outlet property="TaskComment" destination="N8f-E8-CVN" id="n16-aI-E8Q"/>
+                                            <outlet property="TaskDate" destination="vBm-d6-uDT" id="AnH-dK-Hez"/>
+                                            <outlet property="TaskTime" destination="mtf-3F-y7o" id="a1O-rW-E8p"/>
+                                            <outlet property="TaskTitle" destination="Gqh-yo-vkr" id="5xr-BC-wBR"/>
+                                            <outlet property="cellColor" destination="3fb-j1-xt8" id="BqM-eH-Q87"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3T2-0V-8dW" id="xxI-51-6ED"/>
+                                    <outlet property="delegate" destination="3T2-0V-8dW" id="LXg-9f-fiB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5W-jP-hnt">
+                                <rect key="frame" x="315" y="20" width="132" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="S0o-wC-Jds"/>
+                                    <constraint firstAttribute="width" constant="132" id="aM4-Nh-KbG"/>
+                                </constraints>
+                                <state key="normal" image="addfriend_btn"/>
+                                <connections>
+                                    <action selector="addExam:" destination="3T2-0V-8dW" eventType="touchUpInside" id="d5Q-FB-Bz1"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsJ-ZP-F3H">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income_button" translatesAutoresizingMaskIntoConstraints="NO" id="C32-8d-EU4">
+                                        <rect key="frame" x="87" y="97" width="240" height="129"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="C32-8d-EU4" secondAttribute="trailing" constant="87" id="4Ek-uc-NVr"/>
+                                    <constraint firstItem="C32-8d-EU4" firstAttribute="centerY" secondItem="xsJ-ZP-F3H" secondAttribute="centerY" constant="-17.5" id="HIh-SX-nxW"/>
+                                    <constraint firstItem="C32-8d-EU4" firstAttribute="top" secondItem="xsJ-ZP-F3H" secondAttribute="top" constant="97" id="gK6-Jf-zbg"/>
+                                    <constraint firstItem="C32-8d-EU4" firstAttribute="centerX" secondItem="xsJ-ZP-F3H" secondAttribute="centerX" id="ip6-mo-7jU"/>
+                                    <constraint firstAttribute="bottom" secondItem="C32-8d-EU4" secondAttribute="bottom" constant="132" id="lh5-oX-MLX"/>
+                                    <constraint firstItem="C32-8d-EU4" firstAttribute="leading" secondItem="xsJ-ZP-F3H" secondAttribute="leading" constant="87" id="slG-2l-Xif"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xsJ-ZP-F3H" secondAttribute="trailing" id="3s2-Ks-pn6"/>
+                            <constraint firstItem="MBo-ks-9do" firstAttribute="top" secondItem="xsJ-ZP-F3H" secondAttribute="bottom" constant="8" id="AwX-H1-bkw"/>
+                            <constraint firstItem="xsJ-ZP-F3H" firstAttribute="leading" secondItem="k9I-ne-WtM" secondAttribute="leading" id="Bkc-Jl-0aX"/>
+                            <constraint firstItem="xsJ-ZP-F3H" firstAttribute="trailing" secondItem="MBo-ks-9do" secondAttribute="trailing" id="GFS-u9-0tH"/>
+                            <constraint firstItem="xsJ-ZP-F3H" firstAttribute="leading" secondItem="MBo-ks-9do" secondAttribute="leading" id="WKD-VD-h4m"/>
+                            <constraint firstItem="xsJ-ZP-F3H" firstAttribute="top" secondItem="k9I-ne-WtM" secondAttribute="top" id="Xyw-UN-zt1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m5W-jP-hnt" secondAttribute="trailing" constant="-53" id="Zv8-75-IjU"/>
+                            <constraint firstItem="jQe-2T-F7V" firstAttribute="top" secondItem="MBo-ks-9do" secondAttribute="bottom" constant="49" id="adO-l2-dhc"/>
+                            <constraint firstItem="m5W-jP-hnt" firstAttribute="top" secondItem="flU-SY-KXm" secondAttribute="bottom" id="ljc-gA-yNK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="H3t-LS-pl6"/>
+                    <connections>
+                        <outlet property="examTableview" destination="MBo-ks-9do" id="IBb-gJ-gg4"/>
+                        <outlet property="scrollview" destination="xsJ-ZP-F3H" id="5Xj-xX-DIl"/>
+                        <segue destination="SCD-IC-H7O" kind="showDetail" identifier="addExam" id="5Rx-tW-mMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUW-8Z-hUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="1048.3695652173915"/>
+        </scene>
+        <!--Add Exam Screen-->
+        <scene sceneID="Z8Y-Kx-et7">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="SCD-IC-H7O" customClass="AddExamScreen" customModule="MoveYourAss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C0h-8e-PPj"/>
+                        <viewControllerLayoutGuide type="bottom" id="AZo-hU-uYi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TV2-tf-Vrm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I73-Az-8NE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.72549019609999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjc-9v-UXP">
+                                <rect key="frame" x="29" y="197" width="357" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9305329323" green="0.27516016360000001" blue="0.1997722089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fsm-KT-BFb">
+                                <rect key="frame" x="29" y="99" width="357" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.62745098040000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tf1:" destination="4BI-3P-uje" eventType="editingDidBegin" id="5U8-hm-mgr"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-0z-LTG">
+                                <rect key="frame" x="29" y="169" width="357" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tf2:" destination="4BI-3P-uje" eventType="editingDidBegin" id="IgL-lM-SBf"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EVENT DETAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXV-d0-fK5">
+                                <rect key="frame" x="29" y="148" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="hIO-qg-fxd">
+                                <rect key="frame" x="0.0" y="249" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="515319904.98961002">
+                                    <!--2017-05-01 08:25:04 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="4BI-3P-uje" eventType="valueChanged" id="IA1-Hx-rKX"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD EVENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-O5-wBh">
+                                <rect key="frame" x="29" y="80" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqc-cm-dBb">
+                                <rect key="frame" x="86" y="217" width="243.66666666666663" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Select date and time">
+                                    <color key="titleColor" red="0.85490196080000003" green="0.36618300650000002" blue="0.25647058820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="datePicker:" destination="4BI-3P-uje" eventType="touchUpInside" id="Edr-HQ-xbD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqS-sf-iAY">
+                                <rect key="frame" x="29" y="127" width="357" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.36618300650000002" blue="0.25647058820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="90K-PF-qMP">
+                                <rect key="frame" x="29" y="215" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o03-Ug-qYc">
+                                <rect key="frame" x="348" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="Done:" destination="SCD-IC-H7O" eventType="touchUpInside" id="Jvk-TS-nBJ"/>
+                                    <action selector="DoneButton:" destination="4BI-3P-uje" eventType="touchUpInside" id="upD-qg-3eg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znm-WJ-Npa">
+                                <rect key="frame" x="20" y="28" width="63" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="prev_menu_btn"/>
+                                <connections>
+                                    <action selector="backButton:" destination="4BI-3P-uje" eventType="touchUpInside" id="yIO-9V-aGt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.95077945659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="CommentTf" destination="hAF-0z-LTG" id="jAA-tR-fFc"/>
+                        <outlet property="EventTf" destination="Fsm-KT-BFb" id="eEA-uU-hGq"/>
+                        <outlet property="dateOl" destination="Zqc-cm-dBb" id="Nh6-pX-eEg"/>
+                        <outlet property="pickerView" destination="hIO-qg-fxd" id="x8G-sY-Li5"/>
+                        <segue destination="BiZ-5J-K6h" kind="show" identifier="examback" id="QoU-GZ-ry5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xa-Cv-5nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3604.347826086957" y="850.27173913043487"/>
+        </scene>
+        <!--Add Event Screen-->
+        <scene sceneID="5j7-Zx-hRz">
+            <objects>
+                <viewController id="4BI-3P-uje" customClass="AddEventScreen" customModule="MoveYourAss" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p3J-m7-eNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="lJY-hi-3Ya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5k-uD-QPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-gx-mn2">
+                                <rect key="frame" x="29" y="208" width="357" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9305329323" green="0.27516016360000001" blue="0.1997722089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-Ew-8FQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                <color key="backgroundColor" red="1" green="0.37" blue="0.30000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="NJc-jW-Gym"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IZb-Oe-V6G">
+                                <rect key="frame" x="29" y="110" width="357" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.62745098039215685" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tf1:" destination="4BI-3P-uje" eventType="editingDidBegin" id="BJl-Dh-rVX"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qMX-OE-uGV">
+                                <rect key="frame" x="29" y="180" width="357" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tf2:" destination="4BI-3P-uje" eventType="editingDidBegin" id="x3u-VB-fQS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EVENT DETAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-3s-ohz">
+                                <rect key="frame" x="29" y="159" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="35b-Ba-e19">
+                                <rect key="frame" x="0.0" y="260" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="515319904.98961002">
+                                    <!--2017-05-01 08:25:04 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="4BI-3P-uje" eventType="valueChanged" id="PLt-au-db0"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD EVENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVC-G3-M0Q">
+                                <rect key="frame" x="29" y="91" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Traffolight" family="Traffolight" pointSize="14"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnl-iv-9OI">
+                                <rect key="frame" x="86" y="228" width="243.66666666666663" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Select date and time">
+                                    <color key="titleColor" red="0.85490196080000003" green="0.36618300650000002" blue="0.25647058820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="datePicker:" destination="4BI-3P-uje" eventType="touchUpInside" id="okx-Ws-e0j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fMj-Ew-ur4">
+                                <rect key="frame" x="29" y="224" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-4v-sXR">
+                                <rect key="frame" x="29" y="138" width="357" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.36618300651853863" blue="0.25647058824000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-5t-7L1">
+                                <rect key="frame" x="348" y="21" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="DoneButton:" destination="4BI-3P-uje" eventType="touchUpInside" id="LDR-UM-X3I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRT-N5-DDF">
+                                <rect key="frame" x="12" y="25" width="63" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="prev_menu_btn"/>
+                                <connections>
+                                    <action selector="backButton:" destination="4BI-3P-uje" eventType="touchUpInside" id="yT2-z6-uXH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.95077945657165386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ask-Ew-8FQ" secondAttribute="trailing" id="Qc7-ue-68h"/>
+                            <constraint firstItem="Ask-Ew-8FQ" firstAttribute="top" secondItem="q5k-uD-QPJ" secondAttribute="top" id="bFj-os-5xl"/>
+                            <constraint firstItem="Ask-Ew-8FQ" firstAttribute="leading" secondItem="q5k-uD-QPJ" secondAttribute="leading" id="bV4-N4-MTE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KuK-Uu-ftD">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="QPv-1s-azX">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="Done:" destination="4BI-3P-uje" id="0MK-91-QVr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentTf" destination="qMX-OE-uGV" id="d6d-aC-CdZ"/>
+                        <outlet property="dateOl" destination="Pnl-iv-9OI" id="gAJ-db-xNk"/>
+                        <outlet property="eventTf" destination="IZb-Oe-V6G" id="q4s-o5-bAm"/>
+                        <outlet property="pickerView" destination="35b-Ba-e19" id="gxa-vb-qCi"/>
+                        <outlet property="tf1Ol" destination="IZb-Oe-V6G" id="I8t-pR-t3y"/>
+                        <segue destination="4aq-JD-ZyV" kind="show" identifier="back" id="iCW-g0-WVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIU-ED-D4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3592.753623188406" y="138.58695652173915"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cxh-cd-zJc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4aq-JD-ZyV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1dl-21-sYp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fGP-NF-zho" kind="relationship" relationship="viewControllers" id="s6Y-Rt-eb0"/>
+                        <segue destination="BiZ-5J-K6h" kind="relationship" relationship="viewControllers" id="c5F-Z8-CFE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TlI-do-W5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963.76811594202911" y="138.58695652173915"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="XOM-9f-W6m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BiZ-5J-K6h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Rzh-nQ-j7s"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O6E-6D-5hI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3T2-0V-8dW" kind="relationship" relationship="rootViewController" id="3ds-hj-sh9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbF-rg-ucV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="856.79347826086962"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="KnD-eK-r6L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fGP-NF-zho" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nD0-DE-rKl"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pJ9-AD-eVs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xk8-ka-Fug"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXk-NL-cRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.0144927536232" y="138.58695652173915"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HgB-QO-lew">
+            <objects>
+                <viewController id="msA-pw-F0z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kx4-yB-MdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZd-gk-AJC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e1M-LO-ZrX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyZ-5a-lUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addfriend_btn" width="15" height="15"/>
+        <image name="button:Q35-2c-QZm:image" width="37" height="35">
+            <mutableData key="keyedArchiveRepresentation">
+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
+/8wAF/91AA2bDQABEQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAJAAAMHAADJC4ABT1KAAdgZQALhH8ADqaYABDIrAAT4cEAFf3EABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wgAV/qwAE+KaABDKgAAOqGcAC4ZKAAhiLwAF
+Px0AAyYKAAAOAAAAAQAAAAAAAAAAAAAAAAAAAAAtAAU9YQAKf3wADaKVABDEqgAT37kAFPLFABb/ygAX
+/80AF//MABf/yAAX/8YAFv/EABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8QAFv/GABb/yAAX/8wAF//NABf/ygAX/8YAFv+5ABTzrAAT4ZUAEcZ9AA2kZgALgScABDMAAAAApQAS
+2dMAF//MABf/yAAX/8YAFv/FABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/xQAW
+/8YAFv/IABf/zAAX/9kAGP+AAA6oAAAAABoAAyKcABHKzAAX/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8wAF/+iABLTHQADJgAAAAAAAAAAFAAC
+GpgAEcbMABf/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8wAF/+gABHPGQADIgAAAAAAAAAAAAAAAAAAAAARAAIXlQAQwswAF//DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8wAF/+cABHLFwACHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ABAAARSRABC9zAAX/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8wAF/+ZABDHFAAC
+GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAABEo0AD7jMABf/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8wAF/+WABDDEgABGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAALAAAPiwAPtMwAF//DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8wAF/+SAA+/DwABFQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAA2HAA+vzAAX/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8wAF/+OABC6DgABEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAACAAAC4QADq3IABf/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8gAF/+NAA+4DAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABLAAhkzAAX/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/NABf/VwAJ
+cgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAbwANks0AF//DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/zAAX/3sADaEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAEL3KABf/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8gAF/+aABDKAAAA
+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAkAAA2pABPdxwAX/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/GABb/rwAS5g8AARUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAMlugAV9sQAFv/DABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/xAAW/8EAFfwkAAMwAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANwAG
+SMYAFv/DABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/wwAW/8YAFv/HABb/wwAW/8MAFv/DABb/wwAW
+/8MAFv/DABb/wwAW/8MAFv/IABf/QQAHVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYACXDMABf/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/xgAW
+/8wAF/+pABPdpgAR2ssAF//GABb/wwAW/8MAFv/DABb/wwAW/8MAFv/DABb/zQAX/2AAC34AAAAAAAAA
+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
+AAAoAAAEsmhySFIAAAAoAAAE2nBsUEwAAAAsAAAFAnJ1UlUAAAAiAAAFLmFyRUcAAAAmAAAFUGVuVVMA
+AAAmAAAFdgBWAWEAZQBvAGIAZQBjAG4A/QAgAFIARwBCACAAcAByAG8AZgBpAGwARwBlAG4AZQByAGUA
+bAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwAcwBlAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUA
+bgDoAHIAaQBjAEMepQB1ACAAaADsAG4AaAAgAFIARwBCACAAQwBoAHUAbgBnAFAAZQByAGYAaQBsACAA
+UgBHAEIAIABHAGUAbgDpAHIAaQBjAG8EFwQwBDMEMAQ7BEwEPQQ4BDkAIAQ/BEAEPgREBDAEOQQ7ACAA
+UgBHAEIAUAByAG8AZgBpAGwAIABnAOkAbgDpAHIAaQBxAHUAZQAgAFIAVgBCAMEAbAB0AGEAbADhAG4A
+bwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbJAadSgAIABSAEcAQgAggnJfaWPPj/AARwBlAG4AZQByAGkA
+cwBrACAAUgBHAEIALQBwAHIAbwBmAGkAbABPAGIAZQBjAG4A/QAgAFIARwBCACAAcAByAG8AZgBpAGwF
+5AXoBdUF5AXZBdwAIABSAEcAQgAgBdsF3AXcBdkAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
+ZQByAGkAYwBvAFAAcgBvAGYAaQBsACAAUgBHAEIAIABnAGUAbgBlAHIAaQBjAEEAbABsAGcAZQBtAGUA
+aQBuAGUAcwAgAFIARwBCAC0AUAByAG8AZgBpAGzHfLwYACAAUgBHAEIAINUEuFzTDMd8Zm6QGgAgAFIA
+RwBCACBjz4/wZYdO9k4AgiwAIABSAEcAQgAgMNcw7TDVMKEwpDDrA5MDtQO9A7kDugPMACADwAPBA78D
+xgOvA7sAIABSAEcAQgBQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A6QByAGkAYwBvAEEAbABnAGUA
+bQBlAGUAbgAgAFIARwBCAC0AcAByAG8AZgBpAGUAbA5CDhsOIw5EDh8OJQ5MACAAUgBHAEIAIA4XDjEO
+SA4nDkQOGwBHAGUAbgBlAGwAIABSAEcAQgAgAFAAcgBvAGYAaQBsAGkAWQBsAGUAaQBuAGUAbgAgAFIA
+RwBCAC0AcAByAG8AZgBpAGkAbABpAEcAZQBuAGUAcgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkA
+bABVAG4AaQB3AGUAcgBzAGEAbABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8E
+QAQ+BEQEOAQ7BEwAIABSAEcAQgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcA
+ZQBuAGUAcgBpAGMAIABSAEcAQgAgAFAAcgBvAGYAaQBsAGV0ZXh0AAAAAENvcHlyaWdodCAyMDA3IEFw
+cGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQuAFhZWiAAAAAAAADzUgABAAAAARbPWFlaIAAAAAAA
+AHRNAAA97gAAA9BYWVogAAAAAAAAWnUAAKxzAAAXNFhZWiAAAAAAAAAoGgAAFZ8AALg2Y3VydgAAAAAA
+AAABAc0AAHNmMzIAAAAAAAEMQgAABd7///MmAAAHkgAA/ZH///ui///9owAAA9wAAMBs0iUmJyhaJGNs
+YXNzbmFtZVgkY2xhc3Nlc18QEE5TQml0bWFwSW1hZ2VSZXCjJykqWk5TSW1hZ2VSZXBYTlNPYmplY3TS
+JSYsLVdOU0FycmF5oiwq0iUmLzBeTlNNdXRhYmxlQXJyYXmjLywq0zIzCjQ1NldOU1doaXRlXE5TQ29s
+b3JTcGFjZUQwIDAAEAOADNIlJjg5V05TQ29sb3KiOCrSJSY7PFdOU0ltYWdlojsqXxAPTlNLZXllZEFy
+Y2hpdmVy0T9AVHJvb3SAAQAIABEAGgAjAC0AMgA3AEYATABXAF4AZQByAHkAgQCDAIUAigCMAI4AlwCc
+AKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZANsA3R27HcAdyx3UHecd6x32Hf8eBB4MHg8eFB4jHiceLh42
+HkMeSB5KHkweUR5ZHlweYR5pHmwefh6BHoYAAAAAAAACAQAAAAAAAABBAAAAAAAAAAAAAAAAAAAeiA
+</mutableData>
+        </image>
+        <image name="calendar_icon" width="30" height="30"/>
+        <image name="income_button" width="150" height="38"/>
+        <image name="prev_menu_btn" width="9" height="15"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QoU-GZ-ry5"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.99610227346420288" green="0.99589234590530396" blue="0.99216681718826294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
